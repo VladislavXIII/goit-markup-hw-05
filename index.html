@@ -18,6 +18,10 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
@@ -65,11 +69,13 @@
     </header>
     <main>
       <section class="hero">
-        <h1 class="hero-caption">
+        <h1 class="hero-caption animate__animated animate__tada">
           Ефективні рішення<br />
           для вашого бізнесу
         </h1>
-        <button class="hero-btn" type="button">Замовити послугу</button>
+        <button class="hero-btn" type="button" data-modal-open>
+          Замовити послугу
+        </button>
       </section>
       <section class="top-skill">
         <div class="container skill-container">
@@ -110,28 +116,43 @@
           <h2 class="about-caption">Чим ми займаємось</h2>
           <ul class="list about-list">
             <li class="about-link">
-              <a href=""
-                ><img
-                  src="./images/box1.jpg"
-                  alt="Програмування на планшеті"
-                  width="370"
-              /></a>
+              <div class="about-overlay-block">
+                <a href=""
+                  ><img
+                    class="about-img"
+                    src="./images/box1.jpg"
+                    alt="Програмування на планшеті"
+                    width="370"
+                  />
+                  <p class="about-overlay-text">Десктопні додатки</p>
+                </a>
+              </div>
             </li>
             <li class="about-link">
-              <a href=""
-                ><img
-                  src="./images/box2.jpg"
-                  alt="Порівння зі створеним зображенням"
-                  width="370"
-              /></a>
+              <div class="about-overlay-block">
+                <a href=""
+                  ><img
+                    class="about-img"
+                    src="./images/box2.jpg"
+                    alt="Порівння зі створеним зображенням"
+                    width="370"
+                  />
+                  <p class="about-overlay-text">Мобільні додатки</p>
+                </a>
+              </div>
             </li>
             <li class="about-link">
-              <a href=""
-                ><img
-                  src="./images/box3.jpg"
-                  alt="Вибір кольору з палітри на планшеті"
-                  width="370"
-              /></a>
+              <div class="about-overlay-block">
+                <a href=""
+                  ><img
+                    class="about-img"
+                    src="./images/box3.jpg"
+                    alt="Вибір кольору з палітри на планшеті"
+                    width="370"
+                  />
+                  <p class="about-overlay-text">Дизайнерські рішення</p>
+                </a>
+              </div>
             </li>
           </ul>
         </div>
@@ -438,5 +459,15 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-btn" data-modal-close>
+          <svg class="modal-close-icon" width="18" height="18">
+            <use href="./images/symbol-defs.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
